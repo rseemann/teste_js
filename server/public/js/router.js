@@ -7,15 +7,16 @@ AppRouter = Backbone.Router.extend({
 	},
 	
 	login : function(){
-		var opt = {};
+		var opt = {
+			parent : main,
+			model : {}
+		};
 		
-		console.log(App.Views);
-		
-		//this.renderMainContent(new App.Views.Login(opt));
+		this.renderMainContent(new App.Views.Login(opt));
 	},
 	
 	renderMainContent : function(view){
-		main.html(view.el);
+		view.render();
 		//view.render();
 	}
 	
