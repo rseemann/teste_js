@@ -9,7 +9,9 @@ AppRouter = Backbone.Router.extend({
 	login : function(){
 		var opt = {};
 		
-		this.renderMainContent(new App.Views.Login(opt));
+		console.log(App.Views);
+		
+		//this.renderMainContent(new App.Views.Login(opt));
 	},
 	
 	renderMainContent : function(view){
