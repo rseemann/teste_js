@@ -8,5 +8,6 @@ App.Views.Login = Backbone.View.extend({
 	
 	render : function(){
 		$(this.options.parent).append(this.$el);
+		console.log("Hail");
 	}
 });
