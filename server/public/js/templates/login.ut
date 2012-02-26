@@ -1,0 +1,17 @@
+<div class="upper">
+	<img src = 'resources/images/logo.png'>
+	<div class="facebookRegister">
+		
+	</div>
+	<div class="register">
+		<input type="text" name="username" placeholder="username">
+		<input type="password" name="password" placeholder="password">
+		<input type="submit" value="login">
+		<a href="#forgotPassword">esqueci minha senha</a>
+	</div>
+
+</div>
+<div class="content">
+	<div class="facebookRegister">
+	</div>
+</div>

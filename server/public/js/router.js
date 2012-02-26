@@ -1,24 +1,28 @@
 AppRouter = Backbone.Router.extend({
 	main : $('#main'),
-
+	
+	currentMainView : null,
+	
 	routes : {
 		"" : "login",
 		"char" : "charSelection"
 	},
 	
 	login : function(){
-		var opt = {
-			parent : main,
-			model : {}
-		};
-		
-		this.renderMainContent(new App.Views.Login(opt));
+		this.renderMainContent(App.Views.Login);
 	},
 	
 	renderMainContent : function(view){
-		view.render();
-		//view.render();
+		var opt = {
+			parent : this.main,
+			model : {
+				name : "Luana",
+				classe : "Barbarian",
+				gender : 'Female'
+			}
+		};
+		
+		this.currentMainView = new view(opt);
+		this.currentMainView.render();
 	}
-	
-	
 });

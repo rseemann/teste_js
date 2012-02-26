@@ -4,10 +4,25 @@ UT = function(params){
 	};
 	
 	for(var i in params){
-		this[i] = ut(params[i]);
+		this[i] = ut(getTemplate(params[i]));
 	}
 	
 	return this;
+}
+
+var getTemplate = function(url){
+	var path = "js/templates/"+url+".ut";
+	var html;
+	
+	$.ajax({
+		url : path,
+		async : false,
+		success : function(data){
+			html = data;
+		}
+	});
+	
+	return html;
 }
 
 /*
