@@ -1,4 +1,4 @@
-var App = {
+window.App = {
 	Views : {},
 	Controllers : {},
 	init : function(){

@@ -3,11 +3,12 @@ App.Views.Login = Backbone.View.extend({
 	
 	initialize : function(){
 		_.bindAll(this, "render");
+	
+		this.$el.append(UT.Main.Login({name : "Luana"}));
 		
 	},
 	
 	render : function(){
 		$(this.options.parent).append(this.$el);
-		console.log("Hail");
 	}
 });
