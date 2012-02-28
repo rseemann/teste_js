@@ -1,7 +1,17 @@
 <div class="upper">
 	<img src = 'resources/images/logo.png'>
 	<div class="facebookRegister">
-		
+		<div class="fb-login-button" 
+			data-show-faces="false" 
+			data-width="75"
+			data-max-rows="1">
+		</div>
+		<div class="fb-like" 
+			data-href="http://www.heroisebatalhas.com.br" 
+			data-send="true" data-layout="box_count" 
+			data-width="52" data-show-faces="true" 
+			data-font="arial">
+		</div>
 	</div>
 	<div class="register">
 		<input type="text" name="username" placeholder="username">
@@ -12,6 +22,11 @@
 
 </div>
 <div class="content">
-	<div class="facebookRegister">
+	<div class="loginMenu">
+		<a class ="ir" href="#inicio">Início</a>
+		<a class ="ir" href="#sobre">Sobre</a>
+		<a class ="ir" href="#midia">Mídia</a>
+		<a class ="ir" href="#mercado">Mercado</a>
+		<a class ="ir" href="#forum">Forum</a>
 	</div>
 </div>

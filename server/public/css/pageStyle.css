@@ -17,7 +17,6 @@
 }
 
 .login .upper {
-	background-color: blue;
 	height : 190px;
 }
 
@@ -37,7 +36,7 @@
 
 .login .upper .register a{
 	font-size : 10px;
-	margin : 0 0 0 195px;
+	margin : 0 0 0 200px;
 }
 
 
@@ -49,8 +48,30 @@
 	width : 150px;
 }
 
+.fb-login-button{
+	margin : 10px 0 10px 35px;
+}
+
+.fb-like{
+	margin-left : 50px;
+}
+
 .login .content {
 	background-color: gray;
 	height : 100%;
+}
+
+.loginMenu {
+	background-color : orange;
+	height : 50px;
+	width : 100%;
+}
+
+.loginMenu a {
+	background-image : url("../resources/images/menu.png");
+	float : left;
+	height : 40px;
+	margin : 0 15px 0 15px;
+	width : 150px;
 }
 
