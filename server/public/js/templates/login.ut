@@ -23,10 +23,20 @@
 </div>
 <div class="content">
 	<div class="loginMenu">
-		<a class ="ir" href="#inicio">Início</a>
-		<a class ="ir" href="#sobre">Sobre</a>
-		<a class ="ir" href="#midia">Mídia</a>
-		<a class ="ir" href="#mercado">Mercado</a>
-		<a class ="ir" href="#forum">Forum</a>
+		<div class="menuItem">
+			<a href="#inicio">Início</a>
+		</div>
+		<div class="menuItem">
+			<a href="#sobre">Sobre</a>
+		</div>
+		<div class="menuItem">
+			<a href="#midia">Mídia</a>
+		</div>
+		<div class="menuItem">
+			<a href="#mercado">Mercado</a>
+		</div>
+		<div class="menuItem">
+			<a href="#forum">Forum</a>
+		</div>
 	</div>
 </div>

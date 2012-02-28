@@ -1,9 +1,15 @@
+/*== General ==*/
+a {
+	color: black;
+	text-decoration: none;
+}
+
 #container {
 	background-image : url("../resources/images/login.jpg");
 }
 
 #main {
-	background-color : red;
+	//background-color : red;
 	height : 768px;
 	margin : 0 auto;
 	position : relative;
@@ -34,6 +40,12 @@
 	margin : 0 3px;
 }
 
+.login .upper .register input[type="text"], .login .upper .register input[type="password"]{
+	padding-left : 10px;
+	width : 150px;
+}
+
+
 .login .upper .register a{
 	font-size : 10px;
 	margin : 0 0 0 200px;
@@ -41,7 +53,7 @@
 
 
 .upper .facebookRegister {
-	background-color : green;
+	//background-color : green;
 	float: right;
 	height : 100%;
 	padding: 0;
@@ -67,11 +79,22 @@
 	width : 100%;
 }
 
-.loginMenu a {
-	background-image : url("../resources/images/menu.png");
+.loginMenu div {
+	background-image : url("../resources/images/menuItem.jpg");
+	cursor : pointer;
 	float : left;
 	height : 40px;
-	margin : 0 15px 0 15px;
+	margin : 10px 15px;
+	text-align: center;
+	line-height: 40px;
 	width : 150px;
 }
 
+.loginMenu div:hover a{
+	text-shadow : black 2px 2px 2px;
+}
+
+.loginMenu a {
+	color: white;
+	font-weight: bold; 
+}
