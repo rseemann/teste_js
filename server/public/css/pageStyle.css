@@ -5,15 +5,19 @@ a {
 }
 
 #container {
-	background-image : url("../resources/images/login.jpg");
+	background: url("../resources/images/login.jpg") no-repeat center center fixed;
 }
 
 #main {
-	//background-color : red;
+	display : block;
 	height : 768px;
 	margin : 0 auto;
 	position : relative;
-	width : 900px;
+	width : 762px;
+}
+
+#main div {
+	float : left;
 }
 
 .login {
@@ -23,16 +27,12 @@ a {
 }
 
 .login .upper {
-	height : 190px;
-}
-
-.login .upper img{
-	float : left;
-	margin : 0 20px 0 0;
+	height : 150px;
 }
 
 .login .upper .register{
 	padding : 10px 0 0 0;
+	width : 612px;
 }
 
 .login .upper .register input{
@@ -45,16 +45,20 @@ a {
 	width : 150px;
 }
 
+.login .upper .register input[type="submit"]{
+	background-color : rgb(233, 152, 0);
+	border-radius : 20px;
+	border-color : rgb(202, 132, 0);
+}
 
 .login .upper .register a{
+	color : rgb(233, 152, 0);
 	font-size : 10px;
-	margin : 0 0 0 200px;
+	margin : 0 0 0 190px;
 }
 
 
 .upper .facebookRegister {
-	//background-color : green;
-	float: right;
 	height : 100%;
 	padding: 0;
 	width : 150px;
@@ -68,26 +72,25 @@ a {
 	margin-left : 50px;
 }
 
-.login .content {
-	background-color: gray;
-	height : 100%;
-}
-
 .loginMenu {
 	background-color : orange;
 	height : 50px;
 	width : 100%;
 }
 
-.loginMenu div {
+.loginMenu img{
+	margin-top : -100px;
+	float : left;
+}
+
+.loginMenu div.menuItem {
 	background-image : url("../resources/images/menuItem.jpg");
 	cursor : pointer;
-	float : left;
 	height : 40px;
-	margin : 10px 15px;
+	margin : 5px 15px;
 	text-align: center;
 	line-height: 40px;
-	width : 150px;
+	width : 100px;
 }
 
 .loginMenu div:hover a{
@@ -98,3 +101,58 @@ a {
 	color: white;
 	font-weight: bold; 
 }
+
+/*== Guerrômetro ==*/
+
+.guerrometro {
+	background-color : blue;
+	height : 78px;
+	margin : 2px 0 0 23px;
+	width : 714px;
+}
+
+.guerrometro .ir{
+	border : 0;
+	height : 77px;
+	margin : 0;
+	padding : 0;
+	width : 138px;
+}
+
+#orcGuerr {
+	background-image : url('../resources/images/orcs.png');
+}
+
+#barraGuerr{
+	margin-top : 58px;
+}
+
+#barraGuerr, #barraGuerr .ir{
+	height : 19px;
+	width: 438px;
+}
+
+#barraGuerr .ir{
+	position : absolute;
+	background-image : url('../resources/images/guerrometro.png');
+}
+
+#humGuerr {
+	background-image : url('../resources/images/humanos.png');
+}
+
+.barraGuerr {
+	height : 15px;
+	margin-top : -17px;
+	width : 30%;
+} 
+
+#humanBar{
+	background-color : #d90000;
+}
+
+#orcBar{
+	background-color : #00d519;
+}
+
+

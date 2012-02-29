@@ -1,5 +1,4 @@
 <div class="upper">
-	<img src = 'resources/images/logo.png'>
 	<div class="facebookRegister">
 		<div class="fb-login-button" 
 			data-show-faces="false" 
@@ -14,29 +13,37 @@
 		</div>
 	</div>
 	<div class="register">
-		<input type="text" name="username" placeholder="username">
-		<input type="password" name="password" placeholder="password">
-		<input type="submit" value="login">
+		<input type="text" name="username" placeholder="login">
+		<input type="password" name="password" placeholder="senha">
+		<input type="submit" value="ok">
+		<input type="submit" value="Registre-se">
 		<a href="#forgotPassword">esqueci minha senha</a>
 	</div>
-
 </div>
-<div class="content">
-	<div class="loginMenu">
-		<div class="menuItem">
-			<a href="#inicio">Início</a>
-		</div>
-		<div class="menuItem">
-			<a href="#sobre">Sobre</a>
-		</div>
-		<div class="menuItem">
-			<a href="#midia">Mídia</a>
-		</div>
-		<div class="menuItem">
-			<a href="#mercado">Mercado</a>
-		</div>
-		<div class="menuItem">
-			<a href="#forum">Forum</a>
-		</div>
+<div class="loginMenu">
+	<div class="menuItem">
+		<a href="#jogo">Jogo</a>
+	</div>
+	<div class="menuItem">
+		<a href="#mercado">Mercado</a>
+	</div>
+	<img src = 'resources/images/logo.png'>
+	<div class="menuItem">
+		<a href="#midia">Mídia</a>
+	</div>
+	<div class="menuItem">
+		<a href="#comunidade">Comunidade</a>
 	</div>
 </div>
+<div class="guerrometro">
+	<div class="ir" id="orcGuerr"></div>
+	<div id="barraGuerr">
+		<div class="ir"></div>
+		<div class="barraGuerr" id="orcBar"></div>
+		<div class="barraGuerr" id="humanBar"></div>
+	</div>
+	<div class="ir" id="humGuerr"></div>
+</div>
+
+
+
