@@ -15,8 +15,8 @@
 	<div class="register">
 		<input type="text" name="username" placeholder="login">
 		<input type="password" name="password" placeholder="senha">
-		<input type="submit" value="ok">
-		<input type="submit" value="Registre-se">
+		<input id="loginButton" type="submit" value="ok">
+		<input id="registerButton" type="submit" value="Registre-se">
 		<a href="#forgotPassword">esqueci minha senha</a>
 	</div>
 </div>
@@ -39,8 +39,8 @@
 	<div class="ir" id="orcGuerr"></div>
 	<div id="barraGuerr">
 		<div class="ir"></div>
-		<div class="barraGuerr" id="orcBar"></div>
-		<div class="barraGuerr" id="humanBar"></div>
+		<div class="raceBar" id="orcBar"></div>
+		<div class="raceBar" id="humanBar"></div>
 	</div>
 	<div class="ir" id="humGuerr"></div>
 </div>

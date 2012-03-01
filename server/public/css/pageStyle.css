@@ -55,10 +55,19 @@ body {
 }
 
 .login .upper .register input[type="submit"]{
-	background-color : rgb(233, 152, 0);
-	border-radius : 20px;
-	border-color : rgb(202, 132, 0);
+	background-color : transparent;
+	border-color : transparent;
+	color : rgba(0,0,0,0);
 }
+
+#loginButton{
+	background : url("../resources/images/ok.png") no-repeat;	
+}
+
+#registerButton{
+	background : url("../resources/images/registre.png") no-repeat;		
+}
+ 
 
 .login .upper .register a{
 	color : rgb(233, 152, 0);
@@ -114,7 +123,6 @@ body {
 /*== Guerrômetro ==*/
 
 .guerrometro {
-	background-color : blue;
 	height : 78px;
 	margin : 2px 0 0 23px;
 	width : 714px;
@@ -132,6 +140,10 @@ body {
 	background-image : url('../resources/images/orcs.png');
 }
 
+#humGuerr {
+	background-image : url('../resources/images/humanos.png');
+}
+
 #barraGuerr{
 	margin-top : 58px;
 }
@@ -146,22 +158,17 @@ body {
 	background-image : url('../resources/images/guerrometro.png');
 }
 
-#humGuerr {
-	background-image : url('../resources/images/humanos.png');
+#barraGuerr .raceBar{
+	height : 15px;
+	margin-top : 2px;
 }
 
-.barraGuerr {
-	height : 15px;
-	margin-top : -17px;
-	width : 30%;
-} 
-
 #humanBar{
-	background-color : #d90000;
+	background : #d90000 url('../resources/images/guerrBarHuman.png') repeat right top;
 }
 
 #orcBar{
-	background-color : #00d519;
+	background : #00d519 url('../resources/images/guerrBarOrc.png') repeat right top;
 }
 
 

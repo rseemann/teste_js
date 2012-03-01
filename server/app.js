@@ -9,4 +9,15 @@ app.get('/', function(req, res){
 	res.redirect('/public/index.html');
 });
 
+app.get('/guerrometro', function(req, res){
+	var orc = Math.round(Math.random()*100);
+	
+	var data = {
+		orc : orc,
+		human : 100-orc
+	}
+	
+	res.send(data);
+});
+
 app.listen(8080);
