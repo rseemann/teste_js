@@ -20,4 +20,4 @@ app.get('/guerrometro', function(req, res){
 	res.send(data);
 });
 
-app.listen(8080);
+app.listen(80);

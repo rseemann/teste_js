@@ -2,8 +2,6 @@ App.Views.Login = Backbone.View.extend({
 	className : "login",
 	barModel : null,
 	loginContent : null,
-	currentContent : null,
-	animationTime : 400,
 	
 	events : {
 		"click .menuItem a" : "onMenuItemClicked"
@@ -11,7 +9,7 @@ App.Views.Login = Backbone.View.extend({
 	
 	initialize : function(){
 		_.bindAll(this, "render", "setup", "setupGuerrometro", "bootstrapGuerrometro",
-		 "onMenuItemClicked");
+		"bootstrapLoginContent", "onMenuItemClicked");
 	
 		this.$el.append(UT.Main.Login(this.options.model));
 		this.setup();
@@ -19,13 +17,11 @@ App.Views.Login = Backbone.View.extend({
 	
 	setup : function(){
 		this.bootstrapGuerrometro();
-		
-		this.loginContent = this.$el.find('#loginContentWrapper div');
+		this.bootstrapLoginContent();
 	},
 	
 	render : function(){
 		$(this.options.parent).append(this.$el);
-		
 		this.$el.find('.menuItem a[href="#jogo"]').click();
 	},
 	
@@ -38,7 +34,8 @@ App.Views.Login = Backbone.View.extend({
 		
 		var $el = $(e.currentTarget);
 		$el.addClass('active');
-		this.setupContent($el.attr('href'));
+		
+		this.loginContent.trigger('changeContent', $el.attr('href'))
 	},
 	
 	bootstrapGuerrometro : function(){
@@ -48,24 +45,12 @@ App.Views.Login = Backbone.View.extend({
 		this.barModel.startPolling();
 	},
 	
-	setupContent : function(href){
-		href = href.substring(1);
-		
-		var self = this;
-		
-		if(this.currentContent == href){
-			return;
+	bootstrapLoginContent : function(){
+		var opt = {
+			parent : this.$el.find('#loginContentWrapper')
 		}
 		
-		this.currentContent = href;
-		
-		this.loginContent.fadeOut(this.animationTime, function(){
-			var el = $(this);
-			
-			el.css("background-image", "url("+Content.login[href].background+")")
-			
-			 self.loginContent.fadeIn(self.animationTime);
-		})
+		this.loginContent = new App.Views.Login.Content(opt);
 	},
 	
 	setupGuerrometro : function(){

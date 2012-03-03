@@ -213,3 +213,13 @@ body {
 	height : 100%;
 	width : 100%;
 }
+
+#loginContentWrapper p{
+	color: #d09c36;
+}
+
+#loginContentWrapper img{
+	width: 116px;
+	height: 75px;
+}
+
