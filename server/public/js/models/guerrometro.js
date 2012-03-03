@@ -1,6 +1,6 @@
 App.Models.Guerrometro = Backbone.Model.extend({
 	url : '/guerrometro',
-	pollingInterval : 1000,
+	pollingInterval : 10000,
 	
 	defaults : {
 		orc : 50,

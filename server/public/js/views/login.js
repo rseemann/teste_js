@@ -33,15 +33,31 @@ App.Views.Login = Backbone.View.extend({
 	},
 	
 	setupGuerrometro : function(){
-		var raceBars = {
-			orc : this.$el.find('#orcBar'),
-			human : this.$el.find('#humanBar'),
-			shield : this.$el.find('#barShield')
+		var self = this;
+		
+		var els = {
+			orc : find('orcBar'),
+			human : find('humanBar'),
+			shield : this.$el.find('.ir.shield') 
 		}
 		
-		raceBars.orc.css('width', this.barModel.orc());
-		raceBars.human.css('width', this.barModel.human());
-		raceBars.shield.css('width', raceBars.orc.css('width'));
+		for(var i in els){
+			if(els.hasOwnProperty(i) && typeof(this.barModel[i])=== 'function'){
+				els[i].bar.css('width', this.barModel[i]());
+				els[i].percent.html(this.barModel[i]());
+			}
+		}
+		
+		els.shield.css('left', els.orc.bar.css('width'));
+		
+		function find(id){
+			var el = {
+				bar : self.$el.find('#'+id),
+				percent : self.$el.find('#'+id+' .guerrPercent')
+			}
+			
+			return el;
+		}
 	}
 	
 	
