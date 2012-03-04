@@ -1,5 +1,6 @@
 App.Views.Login = Backbone.View.extend({
 	className : "login",
+	animationTime : 400,
 	barModel : null,
 	loginContent : null,
 	
@@ -26,16 +27,29 @@ App.Views.Login = Backbone.View.extend({
 	},
 	
 	onMenuItemClicked : function(e){
+		var $cItem = $(e.currentTarget),
+			self = this;
+		
 		e.preventDefault();
 		
 		this.$el.find('.menuItem a').each(function(i, item){
 			$(item).removeClass('active');
 		});
 		
-		var $el = $(e.currentTarget);
-		$el.addClass('active');
+		$cItem.addClass('active');
 		
-		this.loginContent.trigger('changeContent', $el.attr('href'))
+		this.loginContent.fadeOut(this.animationTime, function(){
+			showNewContent()
+		});
+		
+		function showNewContent(){
+			var href = $cItem.attr('href').substring(1);
+			
+			console.log('showNewContent', href);
+			console.log(new App.Views.Login.Content[href]);
+			
+			self.loginContent.html(new App.Views.Login.Content[href]().$el);
+		}
 	},
 	
 	bootstrapGuerrometro : function(){
@@ -46,11 +60,8 @@ App.Views.Login = Backbone.View.extend({
 	},
 	
 	bootstrapLoginContent : function(){
-		var opt = {
-			parent : this.$el.find('#loginContentWrapper')
-		}
-		
-		this.loginContent = new App.Views.Login.Content(opt);
+		this.loginContent = $('<div></div>');
+		this.$el.find('#loginContentWrapper').append(this.loginContent);
 	},
 	
 	setupGuerrometro : function(){
@@ -84,5 +95,5 @@ App.Views.Login = Backbone.View.extend({
 	
 });
 
-
+//App.Views.Login.Content = {};
 

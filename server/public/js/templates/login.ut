@@ -22,17 +22,17 @@
 </div>
 <div class="loginMenu">
 	<div class="menuItem">
-		<a href="#jogo">Jogo</a>
+		<a href="#Jogo">Jogo</a>
 	</div>
 	<div class="menuItem">
-		<a href="#mercado">Mercado</a>
+		<a href="#Mercado">Mercado</a>
 	</div>
 	<img src = 'resources/images/logo.png'>
 	<div class="menuItem">
-		<a href="#midia">Mídia</a>
+		<a href="#Midia">Mídia</a>
 	</div>
 	<div class="menuItem">
-		<a href="#comunidade">Comunidade</a>
+		<a href="#Comunidade">Comunidade</a>
 	</div>
 </div>
 <div class="guerrometro">
