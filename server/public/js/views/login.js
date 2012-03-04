@@ -1,8 +1,9 @@
 App.Views.Login = Backbone.View.extend({
 	className : "login",
-	animationTime : 400,
 	barModel : null,
+	animationTime : 400,
 	loginContent : null,
+	currentContentKey : null,
 	
 	events : {
 		"click .menuItem a" : "onMenuItemClicked"
@@ -23,12 +24,19 @@ App.Views.Login = Backbone.View.extend({
 	
 	render : function(){
 		$(this.options.parent).append(this.$el);
-		this.$el.find('.menuItem a[href="#jogo"]').click();
+		this.$el.find('.menuItem a[href="#Jogo"]').click();
 	},
 	
 	onMenuItemClicked : function(e){
 		var $cItem = $(e.currentTarget),
+			href = $cItem.attr('href').substring(1),
 			self = this;
+			
+		if(this.currentContentKey == href){
+			return;
+		}
+		
+		this.currentContentKey = href;
 		
 		e.preventDefault();
 		
@@ -43,12 +51,9 @@ App.Views.Login = Backbone.View.extend({
 		});
 		
 		function showNewContent(){
-			var href = $cItem.attr('href').substring(1);
-			
-			console.log('showNewContent', href);
-			console.log(new App.Views.Login.Content[href]);
-			
 			self.loginContent.html(new App.Views.Login.Content[href]().$el);
+			self.loginContent.fadeIn(self.animationTime);
+			
 		}
 	},
 	
@@ -95,5 +100,5 @@ App.Views.Login = Backbone.View.extend({
 	
 });
 
-//App.Views.Login.Content = {};
+App.Views.Login.Content = {};
 

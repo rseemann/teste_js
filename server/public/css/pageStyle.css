@@ -4,6 +4,11 @@ a {
 	text-decoration: none;
 }
 
+li {
+	color: #d09c36;
+	list-style: none;
+}
+
 body {
 	background : black;
 	height : 100%;
@@ -221,5 +226,17 @@ body {
 #loginContentWrapper img{
 	width: 116px;
 	height: 75px;
+}
+
+#mercadoContent .ir{
+	background : url('../resources/images/mercado.png') no-repeat left top;
+	height : 167px;
+	margin : 0 15px;
+	width : 673px;
+}
+
+#midiaContent ul{
+	height : 100%;
+	width : 178px;
 }
 
