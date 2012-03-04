@@ -3,7 +3,7 @@ App.Views.Login.Content.Midia = Backbone.View.extend({
 	
 	initialize : function(){
 		_.bindAll(this, 'setup');
-		
+		 
 		this.setup();
 	},
 	
