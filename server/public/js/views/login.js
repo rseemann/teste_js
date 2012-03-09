@@ -28,6 +28,8 @@ App.Views.Login = Backbone.View.extend({
 	},
 	
 	onMenuItemClicked : function(e){
+		e.preventDefault();
+		
 		var $cItem = $(e.currentTarget),
 			href = $cItem.attr('href').substring(1),
 			self = this;
@@ -37,8 +39,6 @@ App.Views.Login = Backbone.View.extend({
 		}
 		
 		this.currentContentKey = href;
-		
-		e.preventDefault();
 		
 		this.$el.find('.menuItem a').each(function(i, item){
 			$(item).removeClass('active');
@@ -79,10 +79,7 @@ App.Views.Login = Backbone.View.extend({
 		indicator.css('left', orcBar.css('width'));
 		indicator.find('#leftPercent').html(this.barModel.orc()+'%');
 		indicator.find('#rightPercent').html(this.barModel.human()+'%');
-		
 	}
-	
-	
 });
 
 App.Views.Login.Content = {};
