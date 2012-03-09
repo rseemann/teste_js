@@ -27,7 +27,7 @@
 	<div class="menuItem">
 		<a href="#Mercado">Mercado</a>
 	</div>
-	<img src = 'resources/images/logo.png'>
+	<img src = '/images/logo.png'>
 	<div class="menuItem">
 		<a href="#Midia">Mídia</a>
 	</div>
@@ -36,18 +36,14 @@
 	</div>
 </div>
 <div class="guerrometro">
-	<div class="ir" id="orcGuerr"></div>
-	<div id="barraGuerr">
-		<div class="ir barra"></div>
-		<div class="raceBar" id="orcBar" style="width:50%">
-			<div class="guerrPercent">50%</div>
-		</div>
-		<div class="ir shield" style="left:219px"></div>
-		<div class="raceBar" id="humanBar" style="width:50%">
-			<div class="guerrPercent">50%</div>
-		</div>
+	<div class="ir" id="guerrSkel"></div>
+	<div class="raceBar ir" id="humanBar"></div>
+	<div class="raceBar ir" id="orcBar" style="width: 218px"></div>
+	<div id="guerrIndicator" style="left:218px">
+		<p id="leftPercent">50%</p>
+		<div class="ir" id="guerrShield"></div>
+		<p id="rightPercent">50%</p>
 	</div>
-	<div class="ir" id="humGuerr"></div>
 </div>
 
 <div id="loginContentWrapper"></div>

@@ -1,6 +1,6 @@
 App.Models.Guerrometro = Backbone.Model.extend({
 	url : '/guerrometro',
-	pollingInterval : 10000,
+	pollingInterval : 1000,
 	
 	defaults : {
 		orc : 50,
@@ -16,10 +16,10 @@ App.Models.Guerrometro = Backbone.Model.extend({
 	},
 	
 	orc : function(){
-		return this.get('orc')+'%';
+		return this.get('orc');
 	},
 	
 	human : function(){
-		return this.get('human')+'%';
+		return this.get('human');
 	}
 });

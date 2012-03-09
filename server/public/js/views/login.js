@@ -70,31 +70,16 @@ App.Views.Login = Backbone.View.extend({
 	},
 	
 	setupGuerrometro : function(){
-		var self = this;
+		var self = this,
+			maxWidth = 435,
+			orcBar = this.$el.find('#orcBar'),
+			indicator = this.$el.find('#guerrIndicator');
 		
-		var els = {
-			orc : find('orcBar'),
-			human : find('humanBar'),
-			shield : this.$el.find('.ir.shield') 
-		}
+		orcBar.css('width', maxWidth*(this.barModel.orc()/100));
+		indicator.css('left', orcBar.css('width'));
+		indicator.find('#leftPercent').html(this.barModel.orc()+'%');
+		indicator.find('#rightPercent').html(this.barModel.human()+'%');
 		
-		for(var i in els){
-			if(els.hasOwnProperty(i) && typeof(this.barModel[i])=== 'function'){
-				els[i].bar.css('width', this.barModel[i]());
-				els[i].percent.html(this.barModel[i]());
-			}
-		}
-		
-		els.shield.css('left', els.orc.bar.css('width'));
-		
-		function find(id){
-			var el = {
-				bar : self.$el.find('#'+id),
-				percent : self.$el.find('#'+id+' .guerrPercent')
-			}
-			
-			return el;
-		}
 	}
 	
 	

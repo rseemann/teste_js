@@ -19,7 +19,7 @@ body {
 
 #container {
 	height : 768px;
-	background: url("../resources/images/login.jpg") no-repeat center center fixed;
+	background: url("/images/login.jpg") no-repeat center center fixed;
 	width : 100%;
 }
 
@@ -66,11 +66,11 @@ body {
 }
 
 #loginButton{
-	background : url("../resources/images/ok.png") no-repeat;	
+	background : url("/images/ok.png") no-repeat;	
 }
 
 #registerButton{
-	background : url("../resources/images/registre.png") no-repeat;		
+	background : url("/images/registre.png") no-repeat;		
 }
  
 
@@ -96,7 +96,7 @@ body {
 }
 
 .loginMenu {
-	background : url("../resources/images/menuBackground.png") no-repeat left top;
+	background : url("/images/menuBackground.png") no-repeat left top;
 	height : 50px;
 	width : 100%;
 }
@@ -129,60 +129,70 @@ body {
 
 .guerrometro {
 	height : 78px;
-	margin : 2px 0 0 23px;
 	width : 714px;
 }
 
-.guerrometro .ir{
-	border : 0;
-	height : 77px;
-	margin : 0;
-	padding : 0;
-	width : 138px;
-}
-
-#orcGuerr {
-	background-image : url('../resources/images/orcs.png');
-}
-
-#humGuerr {
-	background-image : url('../resources/images/humanos.png');
-}
-
-#barraGuerr{
-	margin-top : 58px;
-}
-
-#barraGuerr, #barraGuerr .barra{
-	height : 19px;
-	width: 438px;
-}
-
-#barraGuerr .ir{
+.guerrometro div{
 	position : absolute;
 }
 
-#barraGuerr .barra{
-	background-image : url('../resources/images/guerrometro.png');
+.guerrometro #guerrSkel{
+	background-image : url('/images/guerrometro_externo.png');
+	height : 100%;
+	margin : 2px 0 0 23px;
+	width : 100%;
+	z-index: 3;
 }
+
+.guerrometro .raceBar{
+	height : 19px;
+	margin: 36px 0 0 163px;
+	width : 435px;
+	z-index: 1;
+}
+
+#humanBar{
+	background : #d90000 url('/images/guerrBarHuman.png') repeat right top;
+}
+
+#orcBar{
+	background : #00d519 url('/images/guerrBarOrc.png') repeat right top;
+}
+
+#guerrIndicator{
+	margin : 20px 0 0 147px;
+}
+
+#guerrIndicator p{
+	color : white;
+	font-size : 10px;
+	font-weight : bold;
+	line-height : 30px;
+	position : absolute;
+	z-index : 2;
+}
+
+#guerrShield {
+	background-image : url('/images/guerrShield.png');
+	height : 40px;
+	width : 35px;
+	z-index : 4;
+}
+
+#leftPercent {
+	margin-left : -20px;
+}
+
+#rightPercent {
+	margin-left : 33px;
+}
+
+/*
 
 #barraGuerr .shield{
 	background-image : url('../resources/images/guerrShield.png');
 	margin-top : -20px;
 	margin-left : 143px;
-}
-
-#barraGuerr .raceBar{
-	height : 15px;
-	margin-top : 2px;
-}
-
-#humanBar{
-	background : #d90000 url('../resources/images/guerrBarHuman.png') repeat right top;
-}
-
-#orcBar{
-	background : #00d519 url('../resources/images/guerrBarOrc.png') repeat right top;
 }
 
 #barraGuerr .guerrPercent{
@@ -201,7 +211,7 @@ body {
 	float : left;
 	margin-left : 15px;
 }
-
+/*
 /*== Login Content ==*/
 
 #loginContentWrapper{
