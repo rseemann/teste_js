@@ -13,10 +13,40 @@ body {
 	background : black;
 	height : 100%;
 	min-height: 600px;
-	//overflow: hidden;
 	width : 100%;
 }
 
+nav.metallicNav ul{
+	height : 100%;
+	margin : 1px 2px;
+	padding : 0;
+}
+
+nav.metallicNav ul li{
+	background : url('/images/itemTexture.png') no-repeat left top;
+	border : 1px solid black;
+	cursor : pointer;
+	font-weight: bold;
+	height : 46px;
+	line-height : 48px;
+	text-align : center;
+	text-shadow : black 2px 2px 2px;
+	width: 140px;
+}
+
+nav.metallicNav li:hover, nav.metallicNav li.active{
+	background : url('/images/itemTextureHover.png') no-repeat left top;
+}
+
+nav.metallicNav ul li a{
+	color : gray;
+}
+
+nav.metallicNav ul li:hover a, nav.metallicNav ul li.active a{
+	color: #d09c36;
+}
+
+/*== Login ==*/
 #container {
 	height : 768px;
 	background: url("/images/login.jpg") no-repeat center center fixed;
@@ -30,7 +60,7 @@ body {
 	width : 762px;
 }
 
-#main div {
+#main div, #main section {
 	float : left;
 }
 
@@ -194,11 +224,11 @@ body {
 	height : 294px;
 	margin : 6px 0 0 24px;
 	overflow : hidden;
-	padding: 5px 7px 6px 5px;
+	padding: 7px;
 	width : 704px;
 }
 
-#loginContentWrapper div{
+#loginContentWrapper body{
 	background-size : 100%;
 	height : 100%;
 	width : 100%;
@@ -209,8 +239,8 @@ body {
 }
 
 #loginContentWrapper img{
-	width: 116px;
 	height: 75px;
+	width: 116px;
 }
 
 #mercadoContent .ir{
@@ -220,8 +250,26 @@ body {
 	width : 673px;
 }
 
-#midiaContent ul{
-	height : 100%;
-	width : 178px;
+#midiaContent nav{
+	float : left;
 }
+
+#midiaContent article{
+	float: right;
+	height: 273px;
+	padding: 10px;
+	width: 538px;
+}
+
+#midiaContent article ul{
+	padding : 0;
+}
+
+#midiaContent article li{
+	float : left;
+	margin: 0 0 19px 14px;
+}
+
+
+
 

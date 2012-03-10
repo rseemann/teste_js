@@ -65,7 +65,7 @@ App.Views.Login = Backbone.View.extend({
 	},
 	
 	bootstrapLoginContent : function(){
-		this.loginContent = $('<div></div>');
+		this.loginContent = $('<body></body>');
 		this.$el.find('#loginContentWrapper').append(this.loginContent);
 	},
 	

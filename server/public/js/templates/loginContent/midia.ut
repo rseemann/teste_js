@@ -1,8 +1,12 @@
-<ul>
-	<li>Conceito de Arte</li>
-	<li>Imagens de Jogo</li>
-	<li>Video</li>
-	<li>Trilha Sonora</li>
-	<li>Arte dos Fãs</li>
-	<li>História do Jogo</li>
-</ul>
+<nav class="metallicNav">
+	<ul>
+		<li><a href="concept">Conceito de Arte</a></li>
+		<li><a href="game">Imagens de Jogo</a></li>
+		<li><a href="video">Video</a></li>
+		<li><a href="soundtrack">Trilha Sonora</a></li>
+		<li><a href="fan">Arte dos Fãs</a></li>
+		<li><a href="history">História do Jogo</a></li>
+	</ul>
+</nav>
+
+<article></article>
